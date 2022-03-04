@@ -1,0 +1,2069 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.pc{ display: none;}
+
+
+header{
+    height: 90px;
+    background-color: #b5ceec;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header button{
+    background-color: transparent;
+    border: 0;
+}
+
+h1{
+    
+    text-align: center;
+}
+
+h1 img{
+    height: 33px;
+    padding-top: 20px;
+}
+
+
+.allBtn{
+    width: 30px;
+    height: 30px;
+    
+    position: absolute;
+    top: 20px;
+    left: 0;
+    
+}
+
+/* allBtn 디자인 */
+
+.allBtn span{
+    display: block;
+    background-color: #fff;
+    width: 15px;
+    height: 2px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.allBtn span::before, .allBtn span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+}
+
+.allBtn span::before{
+    top:-7px;
+}
+.allBtn span::after{
+    top:7px;
+}
+
+.my{
+    width: 30px;
+    height: 30px;
+
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.my img{
+    width: 25px;
+}
+
+
+
+
+/* my버튼 눌렀을 시 */
+nav{
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    transition: right 0.5s linear;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 30, 65);
+
+    z-index: 2;
+
+    padding-top: 100px;
+    /* overflow-y: scroll; */
+}
+
+nav .closeRight{
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+
+.util{
+    text-align: right;
+    font-size: 30px;
+    color: #fff;
+
+    padding-top: 50px;    
+    padding-left: 15px;
+    margin-right: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.util li{
+    padding-top: 10px;
+}
+
+
+
+.srch input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 200px;
+    height: 30px;
+
+    background-image: url(../images/srch.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: right center;
+    color: #fff;
+}
+
+
+/* allBtn 눌렀을 시 */
+aside{
+    position: fixed;
+    top: 0;
+    left: -100%;
+
+    transition: left 0.5s linear;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 30, 65);
+
+    z-index:2;
+    /* overflow-y: scroll; */
+}
+
+.gnb{
+    font-size: 30px;
+    color: #fff;
+    height: 100%;
+    
+    padding-top: 100px;
+    margin-left: 35px;
+    padding-right: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+   
+}
+
+.gnb>li{
+    padding-top: 10px;
+    
+}
+
+.sub{
+    font-size: 14px;
+    display: none;
+    text-indent: 20px;
+}
+
+aside .closeLeft{
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
+
+/* 버튼만들기 */
+.closeRight span, .closeLeft span{
+    display: block;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    margin: 0 auto;
+    border-radius: 30px;
+
+    transform: rotate(45deg);
+
+    position: relative;
+}
+
+.closeRight span::after, .closeLeft span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    border-radius: 30px;
+    
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+}
+
+
+
+
+/* mainBn 부분 */
+.mainBn button{
+    background-color: transparent;
+    border: 0;
+}
+
+.mainBn{
+    height: 70vh;
+    width: 100%;
+    background-color: #b5ceec;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+
+.mainBn .sec .txt{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mainBn .sec .txt h2{
+    font-size: 30px;
+    line-height: 1;
+    /* 행간줄이기*/
+}
+
+.mainBn .sec .txt p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+
+}
+
+.mainBn .sec .txt a{
+    margin: 20px;
+    display: inline-block;
+    line-height: 30px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    background-color: transparent;
+    text-align: center;
+
+    font-size: 16px;
+    color: #fff;
+}
+
+.mainBn .sec1 .txt a{width: 200px;}
+.mainBn .sec2 .txt a{width: 230px;}
+.mainBn .sec3 .txt a{width: 210px;}
+
+
+.mainBn .bnWrap .sec1{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.mainBn .bnWrap .sec1 .bnImg img{    
+    height: 380px;
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    transform: translateX(-52%);
+}
+
+.mainBn .bnWrap .sec2{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    
+}
+
+.mainBn .bnWrap .sec2 .bnImg img{
+    width:270px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.mainBn .bnWrap .sec3{
+    width: 100%;
+    height: 70vh;    
+    position: relative;
+
+}
+.mainBn .bnWrap .sec3 .bnImg img{
+    width:230px;
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+
+.mainNext, .mainPrev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mainNext{
+    right: 0;
+}
+
+.mainPrev{
+    left : 0;
+}
+
+.pager{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+      
+    width: 100px;  
+    transform: translateX(-50%);
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ctnBox{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    
+    position: relative;
+}
+
+.ctnBtn button{
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 20px;
+    height: 20px;
+    color: #fff;
+     
+
+    position: absolute;
+    top: 5px;
+}
+
+.ctnBtn .btnNext{
+    right: 5px;
+}
+.ctnBtn .btnPrev{
+    left: 5px;
+}
+
+
+/* 움직이는 underbar */
+
+.underbar{
+    width: 100%;
+    height: 6px;
+
+    background-color: rgba(1, 30, 65, 0.3);
+
+    position: absolute;
+    bottom:0;
+    left: 0;
+}
+
+.underbar .bar{
+    width: 100%;
+    height: 6px;
+    
+    position: absolute;
+    bottom:0;
+    left: 0;
+
+    animation-name: bar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    /* 일정한 속도로 움직임 */
+}
+
+@keyframes bar{
+    0%{
+        left:0%;
+        background-color: rgb(1, 30, 65)}
+    100%{
+        left:100%;
+        background-color: #011e41;
+        }
+}
+
+
+
+
+/* row1 - life category 시작 영역  */
+.r1Wrap{
+    background-color: #f9f9f9;
+    padding-bottom: 45px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.row1 .txt{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* icon 부분 */
+.row1 .menu ul{
+    display: flex;
+    justify-content: space-around;
+    
+    text-align: center;
+    font-size: 12px;
+    color: #363636;
+}
+
+.row1 .menu li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 80px;
+    height: auto;
+    padding: 5px 0;
+    
+}
+
+.row1 .menu li .ico{
+    width: 49px;
+    height: 49px;
+    margin: 0 auto 5px;
+    
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.row1 .menu li .ico1{
+background-image: url(../images/icon-cleaner.png);
+}
+.row1 .menu li .ico2{
+background-image: url(../images/icon-mixer.png);
+}
+.row1 .menu li .ico3{
+background-image: url(../images/icon-porter.png);
+}
+.row1 .menu li .ico4{
+background-image: url(../images/icon-sicki.png);
+}
+.row1 .menu li .ico5{
+background-image: url(../images/icon-induction.png);
+}
+
+.row1 .menu li:hover a{
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0 rgba(150, 91, 128, 0.3);
+    background-image: linear-gradient(28deg, #011e41 -35%, #3431a2 80%);
+    /* 011e41 3a3c7b 2503B8 #3431a2 80%, */
+    color: #f9f9f9;
+    font-weight: 30px;
+}
+
+.row1 .menu li:hover .ico1{
+    background-image: url(../images/icon-cleaner1.png);
+}
+.row1 .menu li:hover .ico2{
+    background-image: url(../images/icon-mixer1.png);
+}
+.row1 .menu li:hover .ico3{
+    background-image: url(../images/icon-porter1.png);
+}
+.row1 .menu li:hover .ico4{
+    background-image: url(../images/icon-sicki1.png);
+}
+.row1 .menu li:hover .ico5{
+    background-image: url(../images/icon-induction1.png);
+}
+
+
+
+
+/* rWrap - row 2~6까지 전체 감싸고 있음. */
+.rWrap{
+    
+    margin-bottom: 100px;
+    /* background-color: #f9f9f9; */
+    
+}
+
+.rWrap button{
+    border: none;
+    background-color: transparent;
+}
+
+
+
+/* row2 영역 (서브배너/슬라이드) */
+.row2{
+    margin-bottom: 50px;
+    background:rgb(235, 236, 246);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+
+    position: relative;
+}
+
+.row2 .tit{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.row2 .tit span{
+    font-weight: bold;
+}
+
+.row2 .img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row2 .img a{
+    display: block;
+}
+
+.row2 .img img{
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.row2 .txt{
+    margin-top: 20px;
+}
+
+.row2 .txt p{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.row2 .btn{
+    margin-top: 20px ;
+    color: #f9f9f9;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #3a3c7b;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* 제이쿼리 slick 에서 자동으로 만들어진 pager 버튼 */
+
+.slick-dots{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.slick-dots li{
+    margin: 0 5px;
+}
+
+.slick-dots li button{
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    opacity: 0.7;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    color: transparent;
+}
+
+.slick-dots li.slick-active button{
+    background-color: rgba(1, 19, 65, 0.9);
+}
+
+
+.row2 .arrLeft{
+    width: 20px;
+    height: auto;
+
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    
+}
+
+.row2 .arrRight{
+    width: 20px;
+    height: auto;
+
+    position: absolute;
+    right: 5%;
+    top: 80%;
+
+}
+
+.row2 .arrLeft img, .row2 .arrRight img{
+    width: 20px;
+}
+
+
+
+/* row3  pick 영역 */
+
+.row3{
+    margin: 10px 0 50px;
+    padding: 30px 15px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.row3 .tit{
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+
+.row3 .tit span{
+    font-weight: bold;
+}
+
+.row3 .boxWrap{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.row3 .boxTop .img, .row3 .boxBtm .img{
+    width: 100px;
+    margin: 0 auto;
+}
+
+.row3 .boxBtm .img{
+    padding: 13px 0;
+}
+.row3 .boxTop .img{
+    height: 100px;
+}
+
+.row3 .boxTop img{
+    width: 100px;
+    height: 100px;
+}
+
+.row3 .boxBtm img{
+    width: 70px;
+    height: 70px;
+}
+
+.row3 .boxL img{
+    width: 300px;
+}
+
+.row3 .boxTop, .row3 .boxBtm {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.row3 .boxL{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 20px;
+    margin: 25px auto;
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.3);
+
+    position: relative;
+} 
+
+.row3 .box{
+    width: 48%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-top: 20px;
+
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.3);
+
+    position: relative;
+} 
+
+.row3 .boxWrap .txt{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.row3 .serial{
+    font-size: 12px;
+    color: #333;
+}
+
+.row3 .price{
+    font-weight: bold;
+}
+
+.row3 .txt span{
+    display: inline-block;
+    text-decoration: line-through;
+    color: #666;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.row3 .box button{
+    width: 20px ;
+    height: 20px;
+}
+
+.row3 .boxL button{
+    width: 30px;
+    height: 30px;
+}
+
+.row3 .boxWrap .cart{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+    background-image: url(../images/icon-cart.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.row3 .boxWrap .heart{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    background-image: url(../images/icon-heart1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* row4 stroy 영역 */
+
+.row4{
+    margin-bottom: 50px;
+    padding: 30px 15px;
+    background-color: #f9f9f9;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.row4 .tit{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.row4 .tit span{
+    font-weight: bold;
+}
+
+.row4 .tit p{
+    font-size: 24px;
+    line-height: 24px;
+}
+.row4 .tit .mes{
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+.row4 .box img{
+    width: 100%;
+    height: 285px;
+    border-radius: 10px;
+}
+
+.row4 .box .img{
+    position: relative;
+    height: 285px;
+    
+    margin-bottom: 15px;
+}
+
+.row4 .over{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #f9f9f9;
+}
+   
+
+.row4 .over a{
+    display: block;
+    height: 100%;
+    transform: translateY(70%);
+    margin-left: 10px;
+}
+
+.row4 .over span{
+    display: flex;
+    
+    position: relative;
+    padding-right: 20px;
+    line-height: 25px;
+}
+
+
+/* row4에 더보기 재생 디자인 !  */
+.row4 .over span::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    left: 44px;
+    transform: translateY(-50%) rotate(135deg);
+    top: 50%;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.row4 .over span::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+
+
+/* row5  동영상 추가 영역 */
+
+.row4 .vid{
+    width: 100%;
+    position: relative;
+    height: 285px;
+    margin-bottom: 15px;
+}
+
+.row4 .vid img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+/* row5 동영상 재생버튼 디자인   */
+.playBtn{
+    position: absolute;
+    top: 50%;
+    left: 50% ; 
+    transform: translate(-50%, -50%);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
+    border: 2px solid #fff;
+    z-index: 5;
+    margin-bottom: 10px;
+    display: block;
+    background-color: transparent;
+    /* background-color: #3a3c7b */
+    /* background-image: linear-gradient(150deg, #3a3c7b -30%, #033495 30%, #011341 70%); */
+    
+}
+
+.arrowRight{
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 18px solid #fff;
+}
+
+
+
+   /* 동영상 넣기 */
+
+.row4 figure{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row4 .closeBtn{
+    border: 2px solid #ccc;
+    background-color: transparent;
+    color: #fff;
+    
+    font-size: 18px;
+    position: absolute;
+    top: 20px;
+    right:20px;
+    padding: 3px;
+}
+
+.row4 .closeBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.row4 figure iframe{
+    width: 100%;
+}
+
+.row4 .txt{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom:20px;
+    color: #fff;
+    text-align: center;
+}
+
+.row4 .detail{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+
+    display: none;
+}
+
+.row4 .playBtn .key{
+    display: none;
+}
+
+
+
+
+/* row6 서비스센터 지도 부분 */
+
+
+.row6{
+    margin-bottom: 50px;
+    padding: 20px 15px;
+    background-color: #f9f9f9;
+}
+
+.row6 .box{ 
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+        
+    background-image: linear-gradient(150deg, #3a3c7b -30%, #033495 30%, #011341 60%);
+    position: relative;
+}
+
+.row6 .ser{
+    height: 250px;
+    font-size: 20px;
+    color: #fff;
+    transform: translateY(25%);
+}
+
+.row6 .ser span{
+    font-weight: bold;
+}
+
+.row6 .form{
+    color: #fff;
+}
+.row6 .srch{
+    margin-top: 15px ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.row6 form{
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid #f9f9f9;
+    padding-bottom: 3px;
+}
+
+.row6 input{
+    text-align: center;
+    width: 160px;
+    height: 20px;
+    padding-left: 15px;
+    border: 0;
+    background-image: url(../images/icon-locationWhite.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+.row6 input::placeholder{
+    color: #f9f9f9;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.row6 .submit{
+    border-radius: 50px;
+    width: 50px;
+    height: 20px;
+    background-color: #fff;
+    color: #011341;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+}
+
+
+/* row7 서비스 메뉴 */
+
+.row7{
+    padding: 20px 15px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.row7 .tit{
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+    
+}
+
+.row7 .serMenu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.row7 li{
+    width: 24%;
+    text-align: center;
+    border: rgba(1, 19, 65) 1px solid;
+    border-radius: 10px;
+    padding: 10px 0;
+    
+}
+
+.row7 .ico{
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+ 
+    background-position: center;
+    background-size: 55px, 55px;
+    background-repeat: no-repeat;
+}
+
+.row7 .ico1{background-image: url(../images/fticon-01.png);}
+.row7 .ico2{background-image: url(../images/fticon-02.png);}
+.row7 .ico3{background-image: url(../images/fticon-03.png);}
+.row7 .ico4{background-image: url(../images/fticon-04.png);}
+
+
+
+.row7 .txt{
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+
+/* footer 부분 */
+
+footer{
+    background-color: #363636;
+    color: #f9f9f9;
+    font-size: 14px;
+    font-family: arial;
+    
+}
+
+.fWrap{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 15px 20px;
+
+}
+
+.fWrap .info{
+    color: #999;
+}
+
+.fWrap .info li:first-child{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.fWrap .info li:first-child span{
+    color: #a6a8d6;
+    /* color: #df5ad4; */
+
+    font-size: 30px;
+} 
+
+.fWrap .sns::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.fWrap .sns li{
+    margin: 20px 0;
+    float: left;
+} 
+
+.fWrap .sns li{
+    margin-right: 10px;
+}
+
+
+.ftbtm{
+    color: #999;
+    font-size: 12px;
+}
+
+address{
+    font-style: normal;
+    margin-bottom: 10px ;
+    white-space: pre;
+}
+
+.fMenu{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    font-size: 12px;
+
+}
+
+.fMenu ul, .policy ul{
+    display: flex;
+    justify-content: center;
+}
+
+.fMenu ul li:after, .policy ul li:after{
+    content: '|';
+    margin: 0 5px;
+}
+.fMenu ul li:last-child::after, .policy ul li:last-child::after {
+    content: '';
+}
+
+.policy{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10px;
+    padding: 20px 15px;
+   
+}
+
+.ccc{ 
+    color : #999;
+}
+.jaju{
+    color: #df5ad4;
+}
+
+
+
+
+
+/***********************************************pc 1200px************************************************* */
+
+@media all and (min-width:1200px){
+
+    .pc{display: block;}
+    .mo{display: none;}
+
+/* header 부분  */
+
+header{
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: transparent;
+    z-index: 10;
+    transition: all 1s;
+}
+
+h1 img{
+    height: 50px;
+    padding-top: 25px;
+}
+
+header.on{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 3px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .hWrap .allBtn span::before{
+    transition: all 1s;
+}
+
+header .hWrap .allBtn span{
+    transition: all 0.5s;
+}
+
+header .hWrap .allBtn span::after{
+    transition: all 0.3s;
+}
+
+header.on .allBtn span,header.on .allBtn span::after,header.on .allBtn span::before{
+    background-color: #011341;
+}
+
+header.on nav .util{
+    color: #011341;
+}
+
+header.on .util .srch a input{
+    border-bottom: 1px solid #011341;
+    background-image: url(../images/srch2.png);
+}
+
+
+.allBtn{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+
+    top: 25px;
+    left: 20px;
+}
+
+
+.allBtn span{
+    width: 25px;
+    height: 3px;
+
+    margin: 10px 0;
+}
+
+.allBtn span::before, .allBtn span::after{
+    width: 30px;
+    height: 3px;
+}
+
+.allBtn span::before{
+    top:-10px;
+}
+
+.allBtn span::after{
+    top:10px;
+}  
+
+.allBtn:hover span::before{
+    animation: icon 0.4s ease-in-out;
+    animation-delay: 0.4s;
+}
+
+.allBtn:hover span{
+    animation: icon 0.4s ease-in-out;
+    animation-delay: 0.2s;
+
+}
+
+.allBtn:hover span::after{
+    animation: icon 0.4s ease-in-out;
+}
+
+
+@keyframes icon{
+    0%{transform: translateX(0%);}
+    25%{transform: translateX(-50%);}
+    50%{transform: translateX(-100%);}
+    75%{transform: translateX(-50%);}
+    100%{transform: translateX(0%);}
+}
+
+
+/* pc aside (왼쪽) */
+    aside{     
+        background-color: #fff; 
+        /* 또는 position: static; */
+        height: 100vh;
+        overflow-y: visible;
+        /* visible 기본값 or unset 해줘도 됨.  */
+        display: flex;
+        width: 100%;       
+       
+    }
+
+    aside .closeLeft{
+        padding-top: 10px;
+        padding-left: 10px; 
+    }
+
+    aside .closeLeft span, aside .closeLeft span:after{
+        width: 40px;
+        height: 3px;
+        border-radius: 20px;
+        background-color: #011341;
+    }
+
+    aside .closeLeft:hover span{
+        transform: rotate(-45deg);
+    }
+
+    aside .closeLeft span{
+        transition: transform 0.8s;
+    }
+
+    aside .gnb{
+        width: 50%;
+        color: #011e41;
+        font-size: 45px;
+        font-weight: 600;
+        margin-left: 100px;
+        margin-top: 0;
+        margin-top: 5vh;
+
+    }
+
+    aside .gnb .sub>li{
+        font-size: 24px;
+        text-indent: 30px;
+    }
+
+    aside .family{
+        width: 50%;
+        
+    }
+
+    aside .family img{
+        width: 80%;
+        margin-top: 15vh;
+        border-radius: 100%;
+    }
+
+
+
+
+/* nav (오른쪽) -> 완료 밖으로 다 빼버림 */
+    nav{
+        right: 0;
+
+        background-color: transparent;
+        position: unset;
+        height: auto;
+
+        overflow-y: visible;
+    }
+
+    .util{
+        display: flex;
+
+        position: absolute;
+        top: -30px;
+        right: 0;
+
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .util li:after{
+        content: '';
+        margin: 0 10px;
+    }
+
+    .srch input{
+        width: 100px;
+        height: auto;
+
+        background-size: contain;
+        
+    }
+
+/* main Bn 영역 */
+/* select - subject : 누끼 깔끔하게 따기*/
+
+.mainBn{
+    background-color: #e6e6e6;
+    height: 80vh;
+}
+
+.mainBn .bnWrap .sec{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.mainBn .txt{
+    width: 50%;
+    padding-left: 50px;
+    padding-top: 20vh;
+}
+
+.mainBn .sec .txt h2{
+    font-size: 80px;
+    padding-right: 100px;
+}
+
+.mainBn .txt span{
+    font-size: 40px;
+    display: block;
+    padding-left: 150px;
+}
+
+.mainBn .sec .txt p{
+    font-size: 18px;
+    color: #363636
+}
+
+.mainBn .sec .txt a{
+    color: #f9f9f9;
+    background-color: rgb(1, 19, 65);
+    font-size: 18px;
+    line-height: 50px;
+    width: 250px;
+    margin-top: 100px;
+}
+
+
+/* 
+pc 메인Bn section 별로 움직이게 하.mainBn 고 싶으면 아래로 수정. 
+단, aos 꺼야함
+이 방법 말고는 animate로 조절하는 방법 있음. 
+
+.bnImg{transition: all 1s;}
+.slick-current .bnImg{
+    transform: translate(100px, -100px);
+}
+
+*/
+
+.bnImg{transition: all 1s;}
+
+.mainBn .slick-current .bnImg,
+.mainBn .slick-current .txt h2,
+.mainBn .slick-current .txt span,
+.mainBn .slick-current .txt p,
+.mainBn .slick-current .txt a{
+    animation-duration: 5s;
+    animation-timing-function: easeOutBack;
+}
+
+.mainBn .slick-current .bnImg{
+    animation-name: move;
+}
+
+@keyframes move {
+    0%{
+    transform: translate(100px, 100px);
+    }
+    50%{
+    transform: translateX(-100px);
+    }
+    100%{
+    transform: translateX(0);
+    }
+}
+
+.mainBn .slick-current .txt h2{
+    animation-name: tit;
+}
+
+@keyframes tit{
+    0%{
+    transform: translateX(-100px);
+    }
+}
+
+.mainBn .slick-current .txt span{
+    animation-name: titright;
+}
+
+@keyframes titright{
+    0%{
+        transform: translateX(100px);
+    }    
+}
+
+
+.mainBn .slick-current .txt p{
+    animation-name: txt;
+}
+
+@keyframes txt{
+
+0%{
+    transform: translateY(50px);
+}    
+}
+
+
+.mainBn .slick-current .txt a{
+    animation-name: txtlook;
+}
+
+@keyframes txtlook{
+    0%{opacity: 0;
+    transform: translateY(50px);}
+    100%{opacity: 1;}  
+}
+    
+
+.mainBn .bnWrap .sec1 .bnImg,.mainBn .bnWrap .sec2 .bnImg,.mainBn .bnWrap .sec3 .bnImg{    
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+    
+.mainBn .bnWrap .sec1 .bnImg img{    
+    top: 20%;
+    right: 0;
+    height: 450px;
+
+}
+
+.mainBn .bnWrap .sec2 .bnImg img{    
+    top: 30%;
+    right: 100px;
+    width:350px;
+
+}
+
+.mainBn .bnWrap .sec3 .bnImg img{    
+    top: 35%;
+    width: 270px;
+    right: 100px;
+}
+
+
+
+
+
+
+/* row1 life category 영역 */
+
+.r1Wrap{
+    margin-bottom: 100px;
+}
+
+.row1{
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+.row1 .txt{
+    transform: translateY(50%);
+}
+
+.row1 .txt h2{
+    font-size: 34px;
+    padding-bottom: 10px;
+    margin-top: -15px;
+}
+
+
+.row1 .menu{
+    margin-top: 50px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.row1 .menu li{
+    margin-right: 20px;
+}
+
+.row1 .menu li:last-child{
+    margin-right: 0;
+}
+
+.row1 .menu li a{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+/* rWrap 부분 (row2 ~ row7) */
+
+.rWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* row2 subBn-슬라이드 영역 (event) */
+
+.row2{
+    margin-bottom: 100px;
+}
+
+.row2 .r2secWrap .row2Sec{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.row2 .txt .tit p{
+    font-size: 30px;
+}
+
+.row2 .row2Sec .img{
+    width: 45%;
+    padding-top: 25px;
+    padding-right: 100px;
+    order: 2;
+    
+}
+
+.row2 .txt .tit{
+    margin-bottom: 0;
+}
+ 
+.row2 .row2Sec .txt{
+    width: 55%;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-left: 100px;
+    text-align: left;
+    order: 1;
+}
+
+.row2 .r2secWrap .row2Sec .txt h4{
+    font-size: 34px;
+}
+
+.row2 .r2secWrap .sec2 .txt h4{
+    font-size: 28px;
+}
+
+.row2 .txt p{
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+.row2 .btn{
+    margin-top: 50px ;
+
+}
+
+
+.row2 .arrLeft{
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.row2 .arrRight{
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* row3 pick 부분 */
+
+.row3{
+    margin-bottom: 100px;
+    background-color: transparent;
+}
+
+.row3 .tit{
+    font-size: 42px;
+    padding-top: 30px;
+}
+
+.row3 .boxWrap{
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.row3 .boxTop, .row3 .boxBtm{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row3 .box, .row3 .boxL{
+    box-shadow: none;
+    margin: 30px 15px 15px;
+    border: 1px solid #ccc;
+    transition: all 1s;
+}
+
+.row3 .box{
+    width: 80%;
+    height: 250px;
+    padding-top: 30px;
+}  
+
+.row3 .boxL{
+    width: 150%;
+    padding-top: 70px;
+    order: 3;
+}
+
+.row3 .boxTop{
+    order: 1;
+}
+
+.row3 .boxBtm{
+    order: 2;
+}
+
+.row3 .boxWrap .cart{
+    background-image: none;
+}
+.row3 .boxWrap .heart{
+    background-image: none;
+}
+
+.row3 .boxTop img{
+    width: 110px;
+    height: 110px;
+}
+
+.row3 .boxTop .img{
+    height: 110px;
+    width: 110px;
+}
+
+.row3 .boxBtm img{
+    width: 90px;
+    height: 90px;
+}
+
+.row3 .boxL img{
+    width: 350px;
+}
+
+
+/* row3 box:hover */
+
+.row3 .box:hover, .row3 .boxL:hover{
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.row3 .box:hover .cart, .row3 .boxL:hover .cart{
+    background-image: url(../images/icon-cart.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.row3 .boxL .cart,.row3 .box .cart{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+/* row4 일렉트로룩스 stroy  */
+
+.r4Wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row4{
+    background-color: transparent;
+}
+
+.row4 .tit p{
+    font-size: 42px;
+    padding-top: 10px;
+}
+
+.row4 .tit .mes{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.r4boxWrap, .r4vidWrap{
+    width: 48%;
+}
+
+.row4 .box .over{
+    opacity: 0;
+}
+/* display : none block 은 transition이 먹지않는다. */
+
+.row4 .box .over{
+    transition: all 1s;
+}
+
+.row4 .box:hover .over{
+    opacity: 1;
+}
+
+
+
+/* row5는 없다.  */
+
+/* row6 서비스센터 지도 */
+
+.row6{
+    margin-bottom: 90px;
+    background-color: transparent;
+}
+
+.row6 .box{
+    height: 480px;
+    position: relative;
+}
+
+.row6 .box .map{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.row6 .box .serWrap{
+   background-color: rgba(1, 19, 65, 0.9);
+   width: 37%;
+   height: 250px;
+   border-radius: 10px;
+
+   position: absolute;
+   top: 50px;
+   right: 20px;
+}
+
+
+.row6 .ser{
+    width: 100%;
+    font-size: 28px;
+    
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    text-align: left;
+}
+
+
+.row6 .srch{
+    margin-top: 50px;
+    top: 50%;
+    left: 50%;
+    
+}
+
+.row6 form{
+    width: 350px;
+}
+
+.row6 .submit{
+    margin-left: auto;
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.row6 input{
+    width: 300px;
+    text-align: left;
+    text-indent: 20px;
+    font-size: 20px;
+}
+
+
+.row6 input::placeholder{
+    font-size: 20px;
+}
+
+/* row7 어떤 서비스를 찾으시나요 */
+
+.r7Wrap{
+    display: flex;
+    width: 1200px;
+    margin-bottom: 100px;
+    background-color: transparent;
+
+}
+
+.r7Wrap .ftleft{
+    width: 30%;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.row7{
+    width: 65%;
+    background-color: transparent;
+}
+
+.row7 .tit{
+    text-align: left;
+    font-size: 32px;
+    text-indent: 20px;
+    padding-top: -10px;
+}
+
+.ftleft .txt1{
+    padding-top: 7px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ftleft .tel{
+    font-size: 34px;
+    color: #3237ce;
+    font-weight: bold;
+
+}
+
+.ftleft .txt2{
+    margin-top: 15px;
+    color:#363636;
+    font-size: 18px;
+}
+
+
+.row7 li{
+    width: 20%;
+    height: 120px;
+    padding-top: 20px;
+    border: 0;
+    border-radius: 50%;
+
+    background-color: #f9f9f9;
+    transition: all 1s;
+}
+
+.row7 .txt{
+    font-size: 14px;
+}
+
+.row7 .ico{
+    transition: all 1s;
+
+}
+
+.row7 li:hover{
+    box-shadow: 5px 5px 10px rgba(1, 19, 65, 0.2);
+}
+
+.row7 li:hover .ico1{background-image: url(../images/fticon-01-1.png);}
+.row7 li:hover .ico2{background-image: url(../images/fticon-02-1.png);}
+.row7 li:hover .ico3{background-image: url(../images/fticon-03-1.png);}
+.row7 li:hover .ico4{background-image: url(../images/fticon-04-1.png);}
+
+
+/* footer */
+
+footer{}
+
+footer .ftbtm{
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+   
+    position: relative;
+}
+
+address{
+    white-space: normal;
+    padding-bottom: 20px;
+}
+
+.ftbtm .sns{
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+.fMenu, .policy{
+    text-align: left;
+}
+
+.fMenu ul, .policy ul{
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: left;   
+    color: #868686;
+    font-size: 14px;
+}
+
+
+
+
+} /* media 마지막 부분 이하여백 */

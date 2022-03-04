@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@400;500&display=swap');
+/* font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: inherit;}
+ul{list-style: none;}
+
+.pc{display: none;}
+
+
+header{
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+    font-size: 16px;
+    position: relative;
+}
+
+.allBtn{
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 18px;
+    left: 25px;
+
+}
+
+.allBtn span, .allBtn span::before, .allBtn span::after{
+    width: 25px;
+    height: 2px;
+    background-color: #363636;
+    border-radius: 10px;
+    transition: all 0.7s;
+
+    position: absolute;
+    left: 0;
+}
+
+.allBtn span::before{
+    content: '';
+    top: -8px;
+  
+}
+.allBtn span::after{
+    content: '';
+    top: 8px;
+}
+
+.allBtn span{
+    top: 11px;
+}
+
+header .util.on{
+    opacity: 1;
+}
+
+header .util{
+    display: flex;
+    justify-content: right;
+    font-weight: bold;
+    font-size: 16px;
+    color: #363636;
+    padding-top: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    opacity: 0;
+    transition: all 1s;
+}
+
+header .util li{
+    margin-right: 25px;
+}
+
+
+header .allBtn.on span:before{
+    transform: rotate(45deg);
+    width: 20px;
+    top: -7px;
+    left: 9px;
+}
+
+header .allBtn.on span:after{
+    transform: rotate(-45deg);
+    width: 20px;
+    top: 6px;
+    left: 9px;
+}
+
+.mainBn{
+    height: 370px;
+    width: 100%;
+}
+
+.mainBn .bnImg{
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../images/background-mobile.png);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+
+.top{
+    text-align: center;
+    width: 35px;
+    height: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    line-height: 30px;
+    z-index: 10;
+
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+
+/* 본문 영역 */
+
+.Wrap{
+    padding: 50px 25px;
+    font-family: 'Noto Sans', sans-serif;
+
+    background-color: #f9f9f9;
+}
+
+
+/* row1 about 영역  */
+
+.row1{
+    margin-bottom: 50px;
+}
+
+.row1 .tit{
+    color: transparent;
+}
+
+
+.row1 .tit img,.row2 .tit img,.r3Wrap .tit img,.row4 .tit img{
+    height: 25px;
+}
+
+.row1 .r1Img{
+    width: 275px;
+    height: 275px;
+    margin: 25px auto;
+    border-radius: 10px;
+
+    background-image: url(../images/rabbit-cute.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.row1 .prof{
+    height: 100px;
+    /* background-color: bisque; */
+    margin-bottom: 15px;
+}
+
+.row1 .licen{
+    height: 100px;
+    margin-bottom: 15px;
+    /* background-color: bisque; */
+
+}
+
+.row1 .hist{
+    height: 100px;
+    /* background-color: bisque; */
+}
+
+
+/* row2 skill 영역 */
+.row2{
+    margin-bottom: 50px;
+
+    background-color: #f9f9f9;
+    }
+
+.row2 .con{
+    margin: 25px auto;
+    width: 95%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row2 .boxWrap{
+    width: 48%;
+    height: 200px;
+    margin-bottom: 15px;
+    /* background-color: antiquewhite; */
+    text-align: center;
+    padding-top: 15px;
+    font-size: 18px;
+    
+}
+
+.row2 .box{
+    width: 150px;
+    height: 150px;
+    /* background-color: aquamarine; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    position: relative;
+}
+
+.st0{
+    fill:none;
+    stroke: rgba(0, 0, 0, 0.8);
+    stroke-width:3;
+    stroke-miterlimit:10;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.st0.active{
+    animation: dash 2s linear forwards ;
+}
+
+@keyframes dash{
+    to{stroke-dashoffset: 1000 ;}
+}
+
+.row2 .boxWrap .tit{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row2 .boxWrap .count{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    color: #363636;
+}
+
+
+/* row3 portfolio 영역 */
+
+.row3{
+    position: relative;
+}
+
+.r3Wrap{
+    margin-bottom: 50px;
+} 
+
+.r3Wrap .tit{
+    margin-bottom: 25px;
+}
+
+.row3 .tabmenu{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
+    margin-bottom: 25px;
+    width: 100%;
+    line-height: 40px;
+    
+}
+
+/* 
+.row3 .r3bar{
+    position: relative;
+} */
+
+.row3 .tabmenu li{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    line-height: 42px;
+    color: #363636;
+    transition: all 0.01s;
+    z-index: 3;
+    transition-delay: 0.5s;
+}
+
+.row3 .tabmenu li.active{
+    color: #f9f9f9;
+    /* color: #7271af; */
+}
+
+.tabBg{
+    display: block;
+
+    position: absolute;
+    left: 0px;
+    top: 0;
+
+    background-image: linear-gradient(to bottom , #a765ad, #8e8ddb );
+    box-shadow:  8px 8px 16px #7271af,-8px -8px 16px #aaa9ff;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
+
+    height: 42px;
+    border-radius: 28px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.row3 .innerbox{
+    width: 90%;
+    margin:0 auto;
+}
+
+.row3 .tabUl p{
+    display: none;
+}
+
+.row3 .tabUl>li:first-child{
+    display: block;
+}
+
+.row3 .tabUl>li{
+    display: none;
+}
+
+.row3 .sub{
+    border: 1px solid #363636;
+    
+}
+
+.row3 .sub li{
+    width: 100%;
+    height: 250px;
+    background-color: antiquewhite;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 250px;
+    margin-bottom: 20px;
+}
+
+.row3 .sub li:last-child{
+    margin-bottom: 0;
+}
+
+
+/* row4 contact 영역 */
+
+.row4{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.row4 .tit{
+    margin-bottom: 25px;
+}
+
+.row4 .mes{
+    width: 90%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #a765ad;
+    margin-left: 5%;
+}
+
+.row4 .sns .mail, .row4 .sns .kakao, .row4 .sns .phone{
+    width: 300px;
+    height: 100px;
+    background-color: #8e8ddb;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    
+}
+
+.row4 .mailImg, .row4 .kakaoImg, .row4 .phoneImg{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center
+}
+
+.row4 .mailImg img{
+    width: 35px;
+}
+
+.row4 .mail .txt, .row4 .kakao .txt, .row4 .phone .txt {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row4 .kakaoImg img{
+    width: 35px;
+}
+
+.row4 .phoneImg img{
+    width: 25px;
+}
+
+
+footer{
+    height: 60px;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    text-align: center;
+    color: #ccc;
+}
+
+.copyright{
+    font-size: 12px;
+    color: #aaa;
+}
+
+
+
+
+
+
+/* pc 영역***************************************************************************************************/
+@media all and (min-width:1200px){
+
+.mo{display: none;}
+.pc{display: block;}
+
+
+header{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 0;
+    
+}
+
+h1{
+    font-size: 34px;
+}
+
+.hWrap{
+    width: 1200px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 120px;
+    color: #e6e6e6;
+    position: relative;
+}
+
+header .util{
+    opacity: 1;
+    color: #f9f9f9;
+    font-size: 24px;
+    
+    position: absolute;
+    top: -25px;
+    right: 0;
+}
+
+.mainBn{
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+/* 오른쪽 pc nav 영역 */
+
+nav{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+
+
+nav button{
+    display: block;
+    background-color: transparent;
+    border: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(196, 190, 252);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+button span{
+    background-color: #fff;
+    font-size: 12px;
+    border: 1px solid #eee;
+    padding: 2px;
+
+    position: absolute;
+    top: 0;
+    right: -60px;
+
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+button:hover span, button.active span{
+    opacity: 1;
+    right: 20px;
+}
+
+button.active{
+    background-color: midnightblue;
+}
+
+
+
+.Wrap{
+    
+    margin: 0 auto;
+}
+
+
+/* pc row1 about (소개) 영역 */
+
+.row1{
+    width: 1200px;
+    height: 80vh;
+    margin: 0 auto ;
+    padding: 20vh 0 0; 
+}
+
+.row1 .tit, .row2>.tit, .r3Wrap .tit, .row4 .tit{
+    color: #363636;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+
+    margin-bottom: 100px;
+}
+
+
+.r1Wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row1 .r1box{
+    width: 50%;
+    margin-top: 20px;
+}
+
+
+
+
+/* pc row2 skills 영역 */
+
+
+.row2{
+    width: 1200px;
+    height: 80vh;
+    margin: 0 auto ;
+    padding: 20vh 0 0;  
+}
+
+.row2 .con{
+    width: 100%;
+    
+}
+
+.row2 .boxWrap{
+    width: 24%;
+}
+
+.row2 .boxWrap .box{
+    width: 200px;
+    height: 200px;
+}
+
+.row2 .con .boxWrap>p{
+    margin-top: 100px;
+}
+
+
+
+/* pc r3Wrap/row3 영역  */
+
+
+.r3Wrap{
+    width: 1200px;
+    height: 80vh;
+    margin: 0 auto ;
+    padding: 20vh 0 0; 
+
+}
+
+.row3 .innerbox{
+    width: 100%;
+}
+
+.row3 .sub{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.row3 .sub li{
+    width: 24%;
+    margin-bottom: 0;
+}
+
+.row3 .tabBg{
+    padding: 0 35px;
+}
+
+
+
+/* pc row4 영역 */
+
+
+.row4{
+    width: 1200px;
+    height: 80vh;
+    margin: 0 auto ;
+    padding: 20vh 0 0;  
+}
+
+.row4 .r4Wrap{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.row4 .mes{
+    width: 50%;
+}
+
+.row4 .sns{
+    width: 50%;
+    margin: 0;
+}
+
+
+
+}/* media pc 영역 end */
